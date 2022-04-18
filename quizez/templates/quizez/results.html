@@ -1,0 +1,34 @@
+<h1>Results</h1>
+{% block body %}
+<div>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>User</th>
+        <th>Score</th>
+        <th>Quiz</th>
+      </tr>
+    </thead>
+    {% for result in results %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{result.user}}</td>
+      <td>{{result.score}}</td>
+      <td>{{result.quiz}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+    <tr>
+      <td>{{avg}} </td>
+    </tr>
+
+
+  </table>
+  <br>
+  <button><a href="/main">close</a></button>
+</div>
+{% endblock %}
